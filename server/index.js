@@ -6,6 +6,23 @@ const port = 3000
 
 app.use(cors())
 
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    databse: "06.03"
+})
+
+con.connect(function (err) {
+    if (err) console.log(err)
+    else console.log("połączono z bazą danych")
+
+
+
+})
+
+
+
 
 
 app.get("/", (req, res) => {
