@@ -28,13 +28,28 @@ app.get("/select", (req, res) => {
     })
 })
 
+app.get("/add/:imie/:nazwisko/:klasa", (req, res) => {
+    const imie = req.params.imie
+    const nazwisko = req.params.nazwisko
+    const klasa = req.params.klasa
 
-app.get("/", (req, res) => {
-    res.send("ok")
+    const sql = `INSERT INTO uczniowie (imie, nazwisko, klasa) VALUES ('${imie}', '${nazwisko}', '${klasa}')`
+
+    con.query(sql, (err, result, fields) => {
+        if (err) console.log(err)
+        else res.send("dodano rekord")
+    })
+
 })
 
 
 
+
+
+
+app.get("/", (req, res) => {
+    res.send("ok")
+})
 app.listen(port, () => {
     console.log("app works on port: " + port)
 })
