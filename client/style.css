@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+/*glowna struktura*/
+#all {
+  display: grid;
+  grid-template-columns: 24vw 76vw;
+  grid-template-rows: 100vh;
+  grid-template-areas: "menu content";
+}
+#menu {
+  grid-area: menu;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+#content {
+  grid-area: content;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+/*mniejsze elementy*/
+.oferta {
+  margin: 10px;
+  border-radius: 20px;
+  background-color: rgba(211, 211, 211, 0.656);
+  height: 20vh;
+  width: 28vw;
+  border: 5px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 400px;
+}
+.input {
+  width: 13vw;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 5px solid black;
+}
+.full {
+  text-align: center;
+  font-weight: bold;
+  font-family: system-ui;
+  font-size: 30px;
+}

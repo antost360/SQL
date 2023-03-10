@@ -1,1 +1,1 @@
-# SQL połączenie 
+# SQL połączenie
