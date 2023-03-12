@@ -39,4 +39,14 @@ app.get("/additem/:imie/:nazwisko/:klasa", (req, res) => {
   })
 })
 
+app.get("/usun/:data", (req, res) => {
+  const data = req.params.data
+  const sql = `DELETE FROM uczniowie WHERE id=${data};`
+
+  con.query(sql, (err, result, fields) => {
+    if (err) console.log(err)
+    else res.send("item removed")
+  })
+})
+
 app.listen(port)
